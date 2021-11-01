@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142997649-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-142997649-1');
+    </script>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ASMRフォニックス</title>
+    <meta name="description" content="リズムに乗りながらフォニックスを聞き流すASMRアプリです。">
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/asmr-phonics/sw.js');
+        });
+      }
+    </script>
+    <script async src="https://cse.google.com/cse.js?cx=partner-pub-6459713332128733:7164795498"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/asmr-phonics/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/asmr-phonics/favicon/favicon-48x48.png">
+    <link rel="manifest" href="/asmr-phonics/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/asmr-phonics/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/asmr-phonics/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/asmr-phonics/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+      html[data-theme="dark"] { filter: invert(1) hue-rotate(180deg); }
+      @-moz-document url-prefix() { html[data-theme="dark"] { background-color:black; } }
+      html[data-theme="dark"] #kohacu { filter: invert(1) hue-rotate(180deg); }
+    </style>
+    <script data-ad-client="ca-pub-6459713332128733" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand navbar-light">
+        <div class="container flex-wrap">
+          <a class="navbar-brand" href="/asmr-phonics/">
+            <img src="/asmr-phonics/favicon/original.svg" width="32" height="32">
+            ASMRフォニックス
+          </a>
+          <div class="navbar-nav">
+            <button class="btn btn-secondary btn-sm" data-bs-toggle="collapse" data-bs-target="#gradeOption"
+              aria-expanded="false" aria-controls="gradeOption">コース</button>
+            <button title="ダークモード切替" id="toggleDarkMode" class="fs-4 btn p-0 ms-1">🌓</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <noscript>
+        <div class="alert alert-info text-center">JavaScript を ON にしてください</div>
+      </noscript>
+      <p>リズムに<ruby>乗<rt>の</rt></ruby>りながらフォニックスを<ruby>聞<rt>き</rt></ruby>き<ruby>流<rt>なが</rt></ruby>す ASMR アプリです。
+      </p>
+      <form id="gradeOption" name="gradeOption" class="collapse tab-content mb-3">
+        <div class="mb-3 p-1 text-center border rounded">
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="a1" checked>a (あ)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="u">u (あ)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="ar">ar (あー)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="ur-ir-er">ur ir er (あー)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="o-oo-ou">o oo ou (あ)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="i-ie">i ie (あぃ)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="igh">igh (あぃ)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="y">y (あぃ)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="ou-ow">ou ow (あぅ)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="i">i (い)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="ee-ea">ee ea (いー)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="y-ey">y ey (いー)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="ie-ei">ie ei (いー)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="eer-ear">eer ear (いぁ)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="oo1">oo (う)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="oo2">oo (うー)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="ew">ew (うー ゆー)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="u-ue">u ue (ゆー うー)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="e-ea">e ea (え)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="air are">air are (えぁ)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="a2">a (えぃ)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="ai-ay">ai ay (えぃ)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="eigh">eigh (えぃ)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="o">o (o)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="or-au-aw">or au aw (おー)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="all">all (おーる)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="oi-oy">oi oy (おぃ)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="o-oa-ow">o oa ow (おぅ)
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="silent-e">サイレントE
+          </label>
+          <label class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="radio" value="th">th (す ず)
+          </label>
+        </div>
+      </form>
+      <div class="text-center py-5">
+        <img id="kohacu" src="kohacu.webp" alt="kohacu" width="128" height="128">
+      </div>
+      <div class="text-center">
+        <button id="respeak" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 5V1L7 6l5 5V7c3.31.0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"></path>
+          </svg>
+        </button>
+        <button class="btn btn-primary">
+          <svg id="stopButton" class="d-none" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"/>
+          </svg>
+          <svg id="startButton" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" viewBox="0 0 16 16">
+            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+          </svg>
+        </button>
+      </div>
+    </main>
+    <footer class="pt-4 alert text-center">
+      <div class="pt-3">
+        <a class="px-1" href="/">Home</a>
+        <a class="px-1" href="/terms/">Terms</a>
+        <a class="px-1" href="https://github.com/marmooo/asmr-phonics">Contact</a>
+      </div>
+      <div class="text-muted">&copy; <a href="https://github.com/marmooo">marmooo</a>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
+
