@@ -8,10 +8,6 @@ function loadConfig() {
   if (localStorage.getItem("darkMode") == 1) {
     document.documentElement.dataset.theme = "dark";
   }
-  if (localStorage.getItem("voice") != 1) {
-    document.getElementById("voiceOn").classList.add("d-none");
-    document.getElementById("voiceOff").classList.remove("d-none");
-  }
 }
 
 function toggleDarkMode() {
@@ -115,7 +111,6 @@ function startASMR() {
   speechSynthesis.cancel();
   problem = problems[getRandomInt(0, problems.length)];
   const text = problem[0].split("").join("-") + " is, " + problem[0];
-  console.log(text);
   const msgEn = speak(text, "en-US");
   msgEn.onend = function () {
     if (!paused) {
