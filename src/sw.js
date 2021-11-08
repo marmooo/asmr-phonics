@@ -1,15 +1,15 @@
-var CACHE_NAME = '2021-11-06 12:45';
+var CACHE_NAME = '2021-11-08 13:15';
 var urlsToCache = [
-  "/asmr-english-words/",
-  "/asmr-english-words/data/0.tsv",
-  "/asmr-english-words/data/1.tsv",
-  "/asmr-english-words/data/2.tsv",
-  "/asmr-english-words/data/3.tsv",
-  "/asmr-english-words/data/4.tsv",
-  "/asmr-english-words/data/5.tsv",
-  "/asmr-english-words/data/6.tsv",
-  "/asmr-english-words/index.js",
-  "/asmr-english-words/favicon/original.svg",
+  "/asmr-phonics/",
+  "/asmr-phonics/data/0.tsv",
+  "/asmr-phonics/data/1.tsv",
+  "/asmr-phonics/data/2.tsv",
+  "/asmr-phonics/data/3.tsv",
+  "/asmr-phonics/data/4.tsv",
+  "/asmr-phonics/data/5.tsv",
+  "/asmr-phonics/data/6.tsv",
+  "/asmr-phonics/index.js",
+  "/asmr-phonics/favicon/original.svg",
   "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",
   "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js",
 ];
