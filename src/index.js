@@ -102,6 +102,13 @@ function respeak() {
       };
     }
   };
+  // iOS API is broken
+  if (/(iPad|iPhone|iPod|Macintosh)/.test(navigator.userAgent)) {
+    setTimeout(() => {
+      document.getElementById("startButton").classList.remove("d-none");
+      document.getElementById("stopButton").classList.add("d-none");
+    }, 2000);
+  }
 }
 
 function startASMR() {
@@ -131,8 +138,13 @@ function stopASMR() {
   speechSynthesis.cancel();
 }
 
+function speakAnswer() {
+  speak(problem[1], "ja-JP");
+}
+
 document.getElementById("toggleDarkMode").onclick = toggleDarkMode;
 document.getElementById("startButton").onclick = startASMR;
 document.getElementById("stopButton").onclick = stopASMR;
 document.getElementById("respeak").onclick = respeak;
+document.getElementById("answer").onclick = speakAnswer;
 document.getElementById("gradeOption").onchange = initProblems;
