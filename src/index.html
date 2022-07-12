@@ -70,99 +70,156 @@ sudo apt install festival speech-dispatcher-festival</code></pre>
       <p>リズムに乗りながらフォニックスを聞き流す ASMR アプリです。
       iOS では再生ボタンを毎回押してください。
       </p>
-      <form id="gradeOption" name="gradeOption" class="collapse tab-content mb-3">
-        <div class="mb-3 p-1 text-center border rounded">
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="a1" checked>a (あ)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="u">u (あ)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="ar">ar (あー)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="ur-ir-er">ur ir er (あー)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="o-oo-ou">o oo ou (あ)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="i-ie">i ie (あぃ)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="igh">igh (あぃ)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="y">y (あぃ)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="ou-ow">ou ow (あぅ)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="i">i (い)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="ee-ea">ee ea (いー)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="y-ey">y ey (いー)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="ie-ei">ie ei (いー)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="eer-ear">eer ear (いぁ)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="oo1">oo (う)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="oo2">oo (うー)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="ew">ew (うー ゆー)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="u-ue">u ue (ゆー うー)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="e-ea">e ea (え)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="air are">air are (えぁ)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="a2">a (えぃ)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="ai-ay">ai ay (えぃ)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="eigh">eigh (えぃ)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="o">o (o)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="or-au-aw">or au aw (おー)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="all">all (おーる)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="oi-oy">oi oy (おぃ)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="o-oa-ow">o oa ow (おぅ)
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="silent-e">サイレントE
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="radio" value="th">th (す ず)
-          </label>
-        </div>
+      <form id="gradeOption" name="gradeOption" class="collapse mb-3 p-2 text-center border rounded">
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="a1" checked>
+          <span class="notranslate">a</span>
+          <span class="ms-1">(あ)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="u">
+          <span class="notranslate">u</span>
+          <span class="ms-1">(あ)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="ar">
+          <span class="notranslate">ar</span>
+          <span class="ms-1">(あー)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="ur-ir-er">
+          <span class="notranslate">ur ir er</span>
+          <span class="ms-1">(あー)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="o-oo-ou">
+          <span class="notranslate">o oo ou</span>
+          <span class="ms-1">(あ)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="i-ie">
+          <span class="notranslate">i ie</span>
+          <span class="ms-1">(あぃ)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="igh">
+          <span class="notranslate">igh</span>
+          <span class="ms-1">(あぃ)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="y">
+          <span class="notranslate">y</span>
+          <span class="ms-1">(あぃ)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="ou-ow">
+          <span class="notranslate">ou ow</span>
+          <span class="ms-1">(あぅ)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="i">
+          <span class="notranslate">i</span>
+          <span class="ms-1">(い)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="ee-ea">
+          <span class="notranslate">ee ea</span>
+          <span class="ms-1">(いー)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="y-ey">
+          <span class="notranslate">y ey</span>
+          <span class="ms-1">(いー)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="ie-ei">
+          <span class="notranslate">ie ei</span>
+          <span class="ms-1">(いー)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="eer-ear">
+          <span class="notranslate">eer ear</span>
+          <span class="ms-1">(いぁ)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="oo1">
+          <span class="notranslate">oo</span>
+          <span class="ms-1">(う)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="oo2">
+          <span class="notranslate">oo</span>
+          <span class="ms-1">(うー)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="ew">
+          <span class="notranslate">ew</span>
+          <span class="ms-1">(うー ゆー)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="u-ue">
+          <span class="notranslate">u ue</span>
+          <span class="ms-1">(ゆー うー)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="e-ea">
+          <span class="notranslate">e ea</span>
+          <span class="ms-1">(え)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="air-are">
+          <span class="notranslate">air are</span>
+          <span class="ms-1">(えぁ)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="a2">
+          <span class="notranslate">a</span>
+          <span class="ms-1">(えぃ)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="ai-ay">
+          <span class="notranslate">ai ay</span>
+          <span class="ms-1">(えぃ)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="eigh">
+          <span class="notranslate">eigh</span>
+          <span class="ms-1">(えぃ)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="o">
+          <span class="notranslate">o</span>
+          <span class="ms-1">お</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="or-au-aw">
+          <span class="notranslate">or au aw</span>
+          <span class="ms-1">(おー)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="all">
+          <span class="notranslate">all</span>
+          <span class="ms-1">(おーる)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="oi-oy">
+          <span class="notranslate">oi oy</span>
+          <span class="ms-1">(おぃ)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="o-oa-ow">
+          <span class="notranslate">o oa ow</span>
+          <span class="ms-1">(おぅ)</span>
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="silent-e">
+          サイレントE
+        </label>
+        <label class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radio" value="th">
+          <span class="notranslate">th</span>
+          <span class="ms-1">(す ず)</span>
+        </label>
       </form>
       <div class="text-center py-5">
         <img id="kohacu" src="kohacu.webp" alt="kohacu" width="128" height="128">
