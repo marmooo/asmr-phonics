@@ -149,11 +149,12 @@ function startASMR() {
   document.getElementById("stopButton").classList.remove("d-none");
   speechSynthesis.cancel();
   problem = problems[getRandomInt(0, problems.length)];
-  const text = problem[0].split("").join("-") + " is, " + problem[0];
+  const [en, ja] = problem;
+  const text = en.split("").join("-") + " is, " + en;
   const msgEn = speak(text, "en-US");
   msgEn.onend = () => {
     if (!paused) {
-      const msgJa = speak(problem[1], "ja-JP");
+      const msgJa = speak(ja, "ja-JP");
       msgJa.onend = () => {
         if (!paused) startASMR();
       };
