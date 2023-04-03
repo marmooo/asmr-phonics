@@ -1,5 +1,6 @@
-let paused = false;
+let problems = [];
 let problem = ["ASMR", "Phonics"];
+let paused = false;
 let englishVoices = [];
 let japaneseVoices = [];
 loadConfig();
@@ -22,13 +23,13 @@ function toggleDarkMode() {
 
 function loadVoices() {
   // https://stackoverflow.com/questions/21513706/
-  const allVoicesObtained = new Promise(function (resolve) {
+  const allVoicesObtained = new Promise((resolve) => {
     let voices = speechSynthesis.getVoices();
     if (voices.length !== 0) {
       resolve(voices);
     } else {
       let supported = false;
-      speechSynthesis.addEventListener("voiceschanged", function () {
+      speechSynthesis.addEventListener("voiceschanged", () => {
         supported = true;
         voices = speechSynthesis.getVoices();
         resolve(voices);
@@ -119,18 +120,17 @@ function respeak() {
   document.getElementById("startButton").classList.remove("d-none");
   document.getElementById("stopButton").classList.add("d-none");
   speechSynthesis.cancel();
-  let text = problem[0];
+  const [en, ja] = problem;
+  let text = en;
   for (let i = 0; i < 2; i++) {
-    text += ", " + problem[0];
+    text += ", " + en;
   }
   const msgEn = speak(text, "en-US");
-  msgEn.onend = function () {
+  msgEn.onend = () => {
     if (paused) {
-      const msgJa = speak(problem[1], "ja-JP");
+      const msgJa = speak(ja, "ja-JP");
       msgJa.onend = () => {
-        if (paused) {
-          respeak();
-        }
+        if (paused) respeak();
       };
     }
   };
@@ -151,13 +151,11 @@ function startASMR() {
   problem = problems[getRandomInt(0, problems.length)];
   const text = problem[0].split("").join("-") + " is, " + problem[0];
   const msgEn = speak(text, "en-US");
-  msgEn.onend = function () {
+  msgEn.onend = () => {
     if (!paused) {
       const msgJa = speak(problem[1], "ja-JP");
       msgJa.onend = () => {
-        if (!paused) {
-          startASMR();
-        }
+        if (!paused) startASMR();
       };
     }
   };

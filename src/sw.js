@@ -1,4 +1,4 @@
-var CACHE_NAME = "2023-02-18 01:10";
+var CACHE_NAME = "2023-04-04 00:05";
 var urlsToCache = [
   "/asmr-phonics/",
   "/asmr-phonics/index.js",
