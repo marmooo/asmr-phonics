@@ -1,9 +1,8 @@
-var CACHE_NAME = "2023-04-04 00:10";
+var CACHE_NAME = "2023-06-10 13:15";
 var urlsToCache = [
   "/asmr-phonics/",
   "/asmr-phonics/index.js",
   "/asmr-phonics/favicon/favicon.svg",
-  "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css",
   "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js",
 ];
 
