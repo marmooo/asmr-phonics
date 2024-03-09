@@ -82,7 +82,7 @@ loadVoices();
 
 function speak(text, lang) {
   speechSynthesis.cancel();
-  const msg = new SpeechSynthesisUtterance(text);
+  const msg = new globalThis.SpeechSynthesisUtterance(text);
   if (lang == "en-US") {
     msg.voice = englishVoices[Math.floor(Math.random() * englishVoices.length)];
     msg.lang = "en-US";
