@@ -1,3 +1,5 @@
+import { Collapse } from "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/+esm";
+
 let problems = [];
 let problem = ["ASMR", "Phonics"];
 let paused = false;
@@ -102,8 +104,8 @@ function getRandomInt(min, max) {
 }
 
 function initProblems() {
-  const grade = document.getElementById("gradeOption").radio.value;
-  fetch("data/" + grade + ".csv")
+  const course = document.getElementById("courseOption").radio.value;
+  fetch("data/" + course + ".csv")
     .then((response) => response.text())
     .then((tsv) => {
       problems = [];
@@ -173,9 +175,10 @@ function speakAnswer() {
   speak(problem[1], "ja-JP");
 }
 
+new Collapse(document.getElementById("courseOption"), { toggle: false });
 document.getElementById("toggleDarkMode").onclick = toggleDarkMode;
 document.getElementById("startButton").onclick = startASMR;
 document.getElementById("stopButton").onclick = stopASMR;
 document.getElementById("respeak").onclick = respeak;
 document.getElementById("answer").onclick = speakAnswer;
-document.getElementById("gradeOption").onchange = initProblems;
+document.getElementById("courseOption").onchange = initProblems;
