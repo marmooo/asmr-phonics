@@ -6,6 +6,7 @@ let paused = false;
 let englishVoices = [];
 let japaneseVoices = [];
 loadConfig();
+loadVoices();
 
 function loadConfig() {
   if (localStorage.getItem("darkMode") == 1) {
@@ -80,7 +81,6 @@ function loadVoices() {
     japaneseVoices = voices.filter((voice) => voice.lang == "ja-JP");
   });
 }
-loadVoices();
 
 function speak(text, lang) {
   speechSynthesis.cancel();
@@ -115,7 +115,6 @@ function initProblems() {
       });
     });
 }
-initProblems();
 
 function respeak() {
   paused = true;
@@ -176,6 +175,7 @@ function speakAnswer() {
 }
 
 new Collapse(document.getElementById("courseOption"), { toggle: false });
+initProblems();
 document.getElementById("toggleDarkMode").onclick = toggleDarkMode;
 document.getElementById("startButton").onclick = startASMR;
 document.getElementById("stopButton").onclick = stopASMR;
