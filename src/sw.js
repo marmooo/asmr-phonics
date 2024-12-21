@@ -1,4 +1,4 @@
-const CACHE_NAME = "2024-05-27 11:00";
+const CACHE_NAME = "2024-12-21 23:00";
 const urlsToCache = [
   "/asmr-phonics/",
   "/asmr-phonics/index.js",
