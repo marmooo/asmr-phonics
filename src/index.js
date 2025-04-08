@@ -1,4 +1,4 @@
-import { Collapse } from "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/+esm";
+import { Collapse } from "https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/+esm";
 
 let problems = [];
 let problem = ["ASMR", "Phonics"];
