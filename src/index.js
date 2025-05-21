@@ -103,17 +103,15 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-function initProblems() {
+async function initProblems() {
   const course = document.getElementById("courseOption").radio.value;
-  fetch("data/" + course + ".csv")
-    .then((response) => response.text())
-    .then((tsv) => {
-      problems = [];
-      tsv.trim().split("\n").forEach((line) => {
-        const [en, ja] = line.split(",");
-        problems.push([en, ja]);
-      });
-    });
+  const response = await fetch("data/" + course + ".csv");
+  const tsv = await response.text();
+  problems = [];
+  tsv.trim().split("\n").forEach((line) => {
+    const [en, ja] = line.split(",");
+    problems.push([en, ja]);
+  });
 }
 
 function respeak() {
@@ -174,8 +172,8 @@ function speakAnswer() {
   speak(problem[1], "ja-JP");
 }
 
+await initProblems();
 new Collapse(document.getElementById("courseOption"), { toggle: false });
-initProblems();
 document.getElementById("toggleDarkMode").onclick = toggleDarkMode;
 document.getElementById("startButton").onclick = startASMR;
 document.getElementById("stopButton").onclick = stopASMR;
